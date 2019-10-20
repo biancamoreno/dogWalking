@@ -1,0 +1,43 @@
+@import '../../../../assets/style/config';
+
+.navmenu {
+    width: 100vw;
+    height: 56px;
+    padding: 10px 16px;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 1px 0 8px rgba(0,0,0,.2);
+
+    &__logo {
+        width: 100%;
+        height: 50px;
+        display: inline-block;
+        color: $primary;
+        font-size: 20px;
+        line-height: 50px;
+        font-weight: bold;
+        text-align: center;
+        padding: 0 10px;
+        box-sizing: border-box;
+
+        ::ng-deep {
+            .logo {
+                width: 99px;
+            }
+        }
+    }
+
+    &__button {
+        position: absolute;
+        top: calc(50% - 12px);
+        left: 16px;
+
+        &__img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+@include respond-to('desktop') {
+}
