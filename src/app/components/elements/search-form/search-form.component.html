@@ -1,0 +1,37 @@
+<div class="search-form">
+    <div class="container">
+        <form action="#" [formGroup]="searchForm" class="search-form__form">
+
+            <div class="row row--full m-b-8">
+
+                <mat-form-field class="search-form__field" [floatLabel]="'never'">
+                    <span matPrefix class="prefixer prefixer--location"></span>
+                    <input class="input search-form__field--address" type="text" matInput formControlName="address" />
+                </mat-form-field>
+
+            </div>
+
+            <div class="row row--half m-b-16">
+
+                <mat-form-field class="search-form__field m-r-1" [floatLabel]="'never'">
+                    <mat-datepicker-toggle matPrefix class="prefixer prefixer--calendar" [for]="startDate"></mat-datepicker-toggle>
+                    <input class="input search-form__field--startDate" matInput formControlName="startDate" [matDatepicker]="startDate" />
+                    <mat-datepicker #startDate disabled="false"></mat-datepicker>
+                </mat-form-field>
+
+                <mat-form-field class="search-form__field" [floatLabel]="'never'">
+                    <mat-datepicker-toggle matPrefix class="prefixer prefixer--calendar" [for]="endDate"></mat-datepicker-toggle>
+                    <input class="input search-form__field--endDate" matInput formControlName="endDate" [matDatepicker]="endDate" [min]="searchForm.controls['startDate'].value" />
+                    <mat-datepicker #endDate disabled="false"></mat-datepicker>
+                </mat-form-field>
+
+            </div>
+
+            <div class="row row--half row__buttons">
+                <app-button id="btn--filter" [label]="'filtro'" [style]="'secondary'" [icon]="'filter'" class="m-r-8"></app-button>
+                <app-button [label]="'buscar'" [icon]="'search'"></app-button>
+            </div>
+
+        </form>
+    </div>
+</div>

@@ -1,0 +1,4 @@
+<button [type]="type" class="btn" [ngClass]="[ style === 'primary' ? 'btn--primary' : '', style === 'secondary'? 'btn--secondary' : '' ]">
+    <span class="btn__icon m-r-8" [ngClass]="[ icon === 'filter' ? 'btn__icon--filter' : '', icon === 'search'? 'btn__icon--search' : '', !icon ? 'btn__icon--none' : '' ]"></span>
+    <span class="btn__label">{{ label }}</span>
+</button>

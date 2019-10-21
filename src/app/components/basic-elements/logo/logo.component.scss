@@ -1,2 +1,11 @@
 @import '../../../../assets/style/config';
 
+.logo {
+    width: 99px;
+}
+
+@include respond-to('desktop') {
+    .logo {
+        width: 130px;
+    }
+}
